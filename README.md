@@ -1,5 +1,7 @@
 # Circular Reveal Animation
 
+[![pub package](https://img.shields.io/pub/v/circular_reveal_animation.svg)](https://pub.dartlang.org/packages/circular_reveal_animation)
+
 Circular Reveal Animation as Flutter widget!
 
 Inspired by Android's `ViewAnimationUtils.createCircularReveal(...)`.
