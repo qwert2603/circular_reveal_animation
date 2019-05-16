@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:circular_reveal_animation/circular_reveal_animation.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 

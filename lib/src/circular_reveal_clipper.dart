@@ -1,5 +1,5 @@
-import 'dart:math';
-import 'dart:ui';
+import 'dart:math' show sqrt;
+import 'dart:ui' show lerpDouble;
 
 import 'package:flutter/material.dart';
 
