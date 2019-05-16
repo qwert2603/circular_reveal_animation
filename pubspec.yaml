@@ -1,7 +1,7 @@
 name: circular_reveal_animation
 description: Circular Reveal Animation
-version: 0.0.1
-author: qwert2603
+version: 1.0.0
+author: Alexander Zhdanov <qwert2603@mail.ru>
 homepage: https://github.com/qwert2603/circular_reveal_animation
 
 environment:
