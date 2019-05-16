@@ -12,11 +12,11 @@ class CircularRevealAnimation extends StatelessWidget {
   final Animation<double> animation;
 
   CircularRevealAnimation({
+    @required this.child,
+    @required this.animation,
     this.center,
     this.minRadius,
     this.maxRadius,
-    @required this.child,
-    @required this.animation,
   });
 
   @override
