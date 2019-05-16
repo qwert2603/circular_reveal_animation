@@ -1,4 +1,4 @@
-import 'dart:math' show sqrt;
+import 'dart:math' show sqrt, max;
 import 'dart:ui' show lerpDouble;
 
 import 'package:flutter/material.dart';
@@ -35,8 +35,8 @@ class CircularRevealClipper extends CustomClipper<Path> {
   bool shouldReclip(CustomClipper<Path> oldClipper) => true;
 
   static double calcMaxRadius(Size size, Offset center) {
-    final w = size.width / 2 + (size.width / 2 - center.dx).abs();
-    final h = size.height / 2 + (size.height / 2 - center.dy).abs();
+    final w = max(center.dx, size.width - center.dx);
+    final h = max(center.dy, size.height - center.dy);
     return sqrt(w * w + h * h);
   }
 }
