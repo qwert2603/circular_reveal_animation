@@ -47,12 +47,14 @@ class _MyHomePageState extends State<MyHomePage>
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: CircularRevealAnimation(
-          child: Container(color: Colors.red),
-          animation: animation,
-          center: Offset(0, 300),
-          minRadius: 12,
-          maxRadius: 200,
+        child: Center(
+          child: CircularRevealAnimation(
+            child: Image.asset('assets/ocv.jpg'),
+            animation: animation,
+          center: Offset(130, 100),
+//            minRadius: 12,
+//          maxRadius: 200,
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
