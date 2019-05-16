@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage>
           child: CircularRevealAnimation(
             child: Image.asset('assets/ocv.jpg'),
             animation: animation,
-          center: Offset(130, 100),
+            center: Offset(130, 100),
 //            minRadius: 12,
 //          maxRadius: 200,
           ),
