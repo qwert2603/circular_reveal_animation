@@ -6,6 +6,8 @@ Circular Reveal Animation as Flutter widget!
 
 Inspired by Android's `ViewAnimationUtils.createCircularReveal(...)`.
 
+[Article](https://habr.com/post/452072/) with description.
+
 ## Demo
 
 ![](https://github.com/qwert2603/circular_reveal_animation/blob/master/art/device20190516131715%20(1).gif)
