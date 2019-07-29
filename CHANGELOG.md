@@ -1,4 +1,4 @@
-## 1.0.3
+## 1.0.6
 
 * Example for dialog.
 
