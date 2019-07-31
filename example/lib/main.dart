@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage>
     );
   }
 
-  Future<void> showRevealDialog(BuildContext context) async {
+  void showRevealDialog(BuildContext context) {
     showGeneralDialog(
       barrierLabel: "Label",
       barrierDismissible: true,
