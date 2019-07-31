@@ -87,20 +87,28 @@ class _MyHomePageState extends State<MyHomePage>
       transitionDuration: Duration(milliseconds: 700),
       context: context,
       pageBuilder: (context, anim1, anim2) {
-        return Container(
-          child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Image.asset('assets/klimt.png'),
-          ),
-          margin: EdgeInsets.only(top: 50, left: 12, right: 12, bottom: 50),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(40),
+        return Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image.asset('assets/klimt.png'),
+            ),
+            margin: EdgeInsets.only(top: 50, left: 12, right: 12, bottom: 0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+            ),
           ),
         );
       },
       transitionBuilder: (context, anim1, anim2, child) {
-        return CircularRevealAnimation(child: child, animation: anim1);
+        final Size size = MediaQuery.of(context).size;
+        return CircularRevealAnimation(
+          center: Offset(size.width / 2, size.height),
+          child: child,
+          animation: anim1,
+        );
       },
     );
   }
