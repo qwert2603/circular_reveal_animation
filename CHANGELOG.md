@@ -1,4 +1,4 @@
-## 1.1.1
+## 1.1.2
 
 * Ability to specify `centerAlignment` for Reveal Animation.
 Parameter `center` is deprecated. Use `centerOffset` or `centerAlignment`.
