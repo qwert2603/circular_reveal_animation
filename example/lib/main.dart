@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage>
         return CircularRevealAnimation(
           child: child,
           animation: anim1,
-//          centerAlignment: Alignment.bottomCenter,
+          centerAlignment: Alignment.bottomCenter,
         );
       },
     );
