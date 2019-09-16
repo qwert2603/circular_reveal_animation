@@ -1,3 +1,7 @@
+## 1.1.0
+
+* Ability to specify `centerAlignment` for Reveal Animation.
+
 ## 1.0.6
 
 * Example for dialog.

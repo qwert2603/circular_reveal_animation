@@ -60,7 +60,8 @@ class _MyHomePageState extends State<MyHomePage>
               CircularRevealAnimation(
                 child: Image.asset('assets/ocv.jpg'),
                 animation: animation,
-                center: Offset(130, 100),
+//                centerAlignment: Alignment.centerRight,
+                centerOffset: Offset(130, 100),
 //                minRadius: 12,
 //                maxRadius: 200,
               ),
@@ -103,11 +104,10 @@ class _MyHomePageState extends State<MyHomePage>
         );
       },
       transitionBuilder: (context, anim1, anim2, child) {
-        final Size size = MediaQuery.of(context).size;
         return CircularRevealAnimation(
-          center: Offset(size.width / 2, size.height),
           child: child,
           animation: anim1,
+//          centerAlignment: Alignment.bottomCenter,
         );
       },
     );
