@@ -23,7 +23,7 @@ CircularRevealAnimation(
   // @required [Animation<double>]
   animation: animation,
   // child's center if not specified
-  center: Offset(0, 300),
+  centerAlignment: Alignment.centerRight,
   // 0 if not specified
   minRadius: 12,
   // distance from center to further child's corner if not specified
@@ -96,7 +96,8 @@ class _MyHomePageState extends State<MyHomePage>
               CircularRevealAnimation(
                 child: Image.asset('assets/ocv.jpg'),
                 animation: animation,
-                center: Offset(130, 100),
+//                centerAlignment: Alignment.centerRight,
+                centerOffset: Offset(130, 100),
 //                minRadius: 12,
 //                maxRadius: 200,
               ),
@@ -123,20 +124,27 @@ class _MyHomePageState extends State<MyHomePage>
       transitionDuration: Duration(milliseconds: 700),
       context: context,
       pageBuilder: (context, anim1, anim2) {
-        return Container(
-          child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Image.asset('assets/klimt.png'),
-          ),
-          margin: EdgeInsets.only(top: 50, left: 12, right: 12, bottom: 50),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(40),
+        return Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image.asset('assets/klimt.png'),
+            ),
+            margin: EdgeInsets.only(top: 50, left: 12, right: 12, bottom: 0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+            ),
           ),
         );
       },
       transitionBuilder: (context, anim1, anim2, child) {
-        return CircularRevealAnimation(child: child, animation: anim1);
+        return CircularRevealAnimation(
+          child: child,
+          animation: anim1,
+          centerAlignment: Alignment.bottomCenter,
+        );
       },
     );
   }
