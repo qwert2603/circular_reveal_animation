@@ -2,7 +2,7 @@ name: circular_reveal_animation
 description:
   Circular Reveal Animation as Flutter widget!
   Inspired by Android's ViewAnimationUtils.createCircularReveal(...).
-version: 1.1.4
+version: 1.1.5
 homepage: https://github.com/qwert2603/circular_reveal_animation
 
 environment:

@@ -1,3 +1,7 @@
+## 1.1.5
+
+* Update example
+
 ## 1.1.4
 
 * Update demo app
