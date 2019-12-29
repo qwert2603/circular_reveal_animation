@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CRA Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: MyHomePage(),
     );
@@ -52,13 +52,36 @@ class _MyHomePageState extends State<MyHomePage>
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               MaterialButton(
-                child: Text("show reveal dialog"),
-                onPressed: () => showRevealDialog(context),
+                child: Text("show reveal image dialog"),
+                onPressed: () => showRevealImageDialog(context),
+                color: Colors.red,
+              ),
+              SizedBox(height: 12),
+              MaterialButton(
+                child: Text("show reveal text dialog"),
+                onPressed: () => showRevealTextDialog(context),
                 color: Colors.amber,
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 12),
+              MaterialButton(
+                child: Text("show / hide image"),
+                onPressed: () {
+                  if (animationController.status == AnimationStatus.forward ||
+                      animationController.status == AnimationStatus.completed) {
+                    animationController.reverse();
+                  } else {
+                    animationController.forward();
+                  }
+                },
+                color: Colors.yellow,
+              ),
+              SizedBox(height: 12),
               CircularRevealAnimation(
-                child: Image.asset('assets/ocv.jpg'),
+                child: Image.asset(
+                  'assets/ocv.jpg',
+                  width: 300,
+                  height: 300,
+                ),
                 animation: animation,
 //                centerAlignment: Alignment.centerRight,
                 centerOffset: Offset(130, 100),
@@ -69,18 +92,10 @@ class _MyHomePageState extends State<MyHomePage>
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        if (animationController.status == AnimationStatus.forward ||
-            animationController.status == AnimationStatus.completed) {
-          animationController.reverse();
-        } else {
-          animationController.forward();
-        }
-      }),
     );
   }
 
-  void showRevealDialog(BuildContext context) {
+  void showRevealImageDialog(BuildContext context) {
     showGeneralDialog(
       barrierLabel: "Label",
       barrierDismissible: true,
@@ -108,6 +123,60 @@ class _MyHomePageState extends State<MyHomePage>
           child: child,
           animation: anim1,
           centerAlignment: Alignment.bottomCenter,
+        );
+      },
+    );
+  }
+
+  void showRevealTextDialog(BuildContext context) {
+    showGeneralDialog(
+      barrierLabel: "Label",
+      barrierDismissible: true,
+      barrierColor: Colors.black.withOpacity(0.5),
+      transitionDuration: Duration(milliseconds: 700),
+      context: context,
+      pageBuilder: (context, anim1, anim2) {
+        return Center(
+          child: Container(
+            constraints: BoxConstraints(maxWidth: 400.0),
+            child: Material(
+              type: MaterialType.transparency,
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text(
+                      "Title of the dialog",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      "Content of the dialog. Content of the dialog. Content of the dialog. Content of the dialog. ",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            margin: EdgeInsets.all(12.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+        );
+      },
+      transitionBuilder: (context, anim1, anim2, child) {
+        return CircularRevealAnimation(
+          child: child,
+          animation: anim1,
+          centerAlignment: Alignment.center,
         );
       },
     );
