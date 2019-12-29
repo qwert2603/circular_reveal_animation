@@ -164,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage>
                       alignment: Alignment.centerRight,
                       child: FlatButton(
                         onPressed: () => Navigator.pop(context),
-                        child: Text("ok"),
+                        child: Text("OK"),
                       ),
                     )
                   ],
