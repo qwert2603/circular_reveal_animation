@@ -160,6 +160,13 @@ class _MyHomePageState extends State<MyHomePage>
                         fontSize: 18.0,
                       ),
                     ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: FlatButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: Text("ok"),
+                      ),
+                    )
                   ],
                 ),
               ),
