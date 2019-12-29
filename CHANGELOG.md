@@ -1,3 +1,8 @@
+## 1.1.4
+
+* Update demo app
+* [Demo web-site](https://qwert2603.github.io/circular_reveal_animation/)
+
 ## 1.1.3
 
 * Update example
