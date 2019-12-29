@@ -10,7 +10,7 @@ Inspired by Android's `ViewAnimationUtils.createCircularReveal(...)`.
 
 [Article](https://medium.com/flutter-community/how-to-implement-circularrevealanimation-as-flutter-library-and-publish-it-on-pub-dev-on-the-way-34e8cd21a46) with description (english).
 
-## Demo
+## [Demo web-site](https://qwert2603.github.io/circular_reveal_animation/)
 
 ![](https://github.com/qwert2603/circular_reveal_animation/blob/master/art/device20190516131715%20(1).gif)
 
