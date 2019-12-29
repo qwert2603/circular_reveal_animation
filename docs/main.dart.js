@@ -34402,7 +34402,7 @@ $C:"$4",
 $R:4}
 F.IZ.prototype={
 $3:function(a,b,c){var u=null,t=new P.aq(5,5)
-return new T.f5(C.U,u,u,M.mo(u,M.zx(C.aa,new T.dD(C.iL,T.O9(H.b([L.fF("Title of the dialog",A.i1(u,u,u,u,u,u,u,u,u,u,u,20,u,C.bo,u,u,!0,u,u,u,u,u,u)),new T.cG(u,8,u,u),L.fF("Content of the dialog. Content of the dialog. Content of the dialog. Content of the dialog. ",A.i1(u,u,u,u,u,u,u,u,u,u,u,18,u,u,u,u,!0,u,u,u,u,u,u)),new T.e4(C.i5,u,u,new N.du(new F.IY(a),u,u,u,u,u,u,u,u,u,u,u,u,L.fF("ok",u),u,u,C.K,u,!1,u,u),u)],[N.bA]),C.hx,C.ju),u),C.K,u,0,u,u,u,C.d6),u,new S.a3(0,400,0,1/0),S.f3(u,new K.aO(t,t,t,t),u,C.k,u,u,C.F),new V.ai(12,12,12,12),u,u),u)},
+return new T.f5(C.U,u,u,M.mo(u,M.zx(C.aa,new T.dD(C.iL,T.O9(H.b([L.fF("Title of the dialog",A.i1(u,u,u,u,u,u,u,u,u,u,u,20,u,C.bo,u,u,!0,u,u,u,u,u,u)),new T.cG(u,8,u,u),L.fF("Content of the dialog. Content of the dialog. Content of the dialog. Content of the dialog. ",A.i1(u,u,u,u,u,u,u,u,u,u,u,18,u,u,u,u,!0,u,u,u,u,u,u)),new T.e4(C.i5,u,u,new N.du(new F.IY(a),u,u,u,u,u,u,u,u,u,u,u,u,L.fF("OK",u),u,u,C.K,u,!1,u,u),u)],[N.bA]),C.hx,C.ju),u),C.K,u,0,u,u,u,C.d6),u,new S.a3(0,400,0,1/0),S.f3(u,new K.aO(t,t,t,t),u,C.k,u,u,C.F),new V.ai(12,12,12,12),u,u),u)},
 $C:"$3",
 $R:3}
 F.IY.prototype={
