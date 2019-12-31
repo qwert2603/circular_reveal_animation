@@ -1,5 +1,6 @@
 import 'package:circular_reveal_animation/circular_reveal_animation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,50 +46,77 @@ class _MyHomePageState extends State<MyHomePage>
       appBar: AppBar(
         title: Text("CRA Demo"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              MaterialButton(
-                child: Text("show reveal image dialog"),
-                onPressed: () => showRevealImageDialog(context),
-                color: Colors.red,
-              ),
-              SizedBox(height: 12),
-              MaterialButton(
-                child: Text("show reveal text dialog"),
-                onPressed: () => showRevealTextDialog(context),
-                color: Colors.amber,
-              ),
-              SizedBox(height: 12),
-              MaterialButton(
-                child: Text("show / hide image"),
-                onPressed: () {
-                  if (animationController.status == AnimationStatus.forward ||
-                      animationController.status == AnimationStatus.completed) {
-                    animationController.reverse();
-                  } else {
-                    animationController.forward();
-                  }
-                },
-                color: Colors.yellow,
-              ),
-              SizedBox(height: 12),
-              CircularRevealAnimation(
-                child: Image.asset(
-                  'assets/ocv.jpg',
-                  width: 300,
-                  height: 300,
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(
+                  'This is demo of "Circular Reveal Animation" Flutter library',
+                  style: TextStyle(fontSize: 16),
                 ),
-                animation: animation,
+                SizedBox(height: 4),
+                InkWell(
+                  child: Text(
+                    'https://github.com/qwert2603/circular_reveal_animation',
+                    style: TextStyle(fontSize: 16, color: Colors.deepOrange),
+                  ),
+                  onTap: () => launch(
+                      "https://github.com/qwert2603/circular_reveal_animation"),
+                ),
+                SizedBox(height: 4),
+                InkWell(
+                  child: Text(
+                    'https://pub.dev/packages/circular_reveal_animation',
+                    style: TextStyle(fontSize: 16, color: Colors.deepOrange),
+                  ),
+                  onTap: () => launch(
+                      "https://pub.dev/packages/circular_reveal_animation"),
+                ),
+                SizedBox(height: 12),
+                MaterialButton(
+                  child: Text("show reveal image dialog"),
+                  onPressed: () => showRevealImageDialog(context),
+                  color: Colors.red,
+                ),
+                SizedBox(height: 12),
+                MaterialButton(
+                  child: Text("show reveal text dialog"),
+                  onPressed: () => showRevealTextDialog(context),
+                  color: Colors.amber,
+                ),
+                SizedBox(height: 12),
+                MaterialButton(
+                  child: Text("show / hide image"),
+                  onPressed: () {
+                    if (animationController.status == AnimationStatus.forward ||
+                        animationController.status ==
+                            AnimationStatus.completed) {
+                      animationController.reverse();
+                    } else {
+                      animationController.forward();
+                    }
+                  },
+                  color: Colors.yellow,
+                ),
+                SizedBox(height: 12),
+                CircularRevealAnimation(
+                  child: Image.asset(
+                    'assets/ocv.jpg',
+                    width: 300,
+                    height: 300,
+                  ),
+                  animation: animation,
 //                centerAlignment: Alignment.centerRight,
-                centerOffset: Offset(130, 100),
+                  centerOffset: Offset(130, 100),
 //                minRadius: 12,
 //                maxRadius: 200,
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
