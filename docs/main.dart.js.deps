@@ -1,5 +1,6 @@
-file:///home/alex/StudioProjects/circular_reveal_animation/example/.dart_tool/flutter_build/c60501128bb0a1f1eb3f9a42f488b299/main.dart
+file:///home/alex/StudioProjects/circular_reveal_animation/example/.dart_tool/flutter_build/de3c22bf24408e50b7c60423d0cf7fe4/main.dart
 file:///home/alex/StudioProjects/circular_reveal_animation/example/.packages
+file:///home/alex/StudioProjects/circular_reveal_animation/example/lib/generated_plugin_registrant.dart
 file:///home/alex/StudioProjects/circular_reveal_animation/example/lib/main.dart
 file:///home/alex/StudioProjects/circular_reveal_animation/lib/circular_reveal_animation.dart
 file:///home/alex/StudioProjects/circular_reveal_animation/lib/src/circular_reveal_animation.dart
@@ -25,7 +26,12 @@ file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/collection
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/utils.dart
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11/lib/src/wrappers.dart
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8/lib/meta.dart
+file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.1/lib/plugin_platform_interface.dart
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib/typed_buffers.dart
+file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.1/lib/url_launcher.dart
+file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_platform_interface-1.0.5/lib/method_channel_url_launcher.dart
+file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_platform_interface-1.0.5/lib/url_launcher_platform_interface.dart
+file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.0+2/lib/url_launcher_web.dart
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib/hash.dart
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib/src/vector_math_64/aabb2.dart
 file:///home/alex/programs/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8/lib/src/vector_math_64/aabb3.dart
@@ -613,3 +619,6 @@ file:///home/alex/programs/flutter/packages/flutter/lib/src/widgets/widget_inspe
 file:///home/alex/programs/flutter/packages/flutter/lib/src/widgets/widget_span.dart
 file:///home/alex/programs/flutter/packages/flutter/lib/src/widgets/will_pop_scope.dart
 file:///home/alex/programs/flutter/packages/flutter/lib/widgets.dart
+file:///home/alex/programs/flutter/packages/flutter_web_plugins/lib/flutter_web_plugins.dart
+file:///home/alex/programs/flutter/packages/flutter_web_plugins/lib/src/plugin_event_channel.dart
+file:///home/alex/programs/flutter/packages/flutter_web_plugins/lib/src/plugin_registry.dart
