@@ -22,15 +22,12 @@ class CircularRevealAnimation extends StatelessWidget {
   CircularRevealAnimation({
     @required this.child,
     @required this.animation,
-    @Deprecated("use centerOffset or centerAlignment") Offset center,
     this.centerAlignment,
-    Offset centerOffset,
+    this.centerOffset,
     this.minRadius,
     this.maxRadius,
   })  : assert(child != null),
-        assert(animation != null),
-        // ignore: deprecated_member_use_from_same_package
-        centerOffset = centerOffset ?? center {
+        assert(animation != null) {
     assert(this.centerAlignment == null || this.centerOffset == null);
   }
 
