@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:circular_reveal_animation/src/circular_reveal_clipper.dart';
 
 class CircularRevealAnimation extends StatelessWidget {
-  final Alignment centerAlignment;
-  final Offset centerOffset;
-  final double minRadius;
-  final double maxRadius;
+  final Alignment? centerAlignment;
+  final Offset? centerOffset;
+  final double? minRadius;
+  final double? maxRadius;
   final Widget child;
   final Animation<double> animation;
 
@@ -20,22 +20,19 @@ class CircularRevealAnimation extends StatelessWidget {
   /// [minRadius] minimum radius of circular reveal. 0 if not if not specified.
   /// [maxRadius] maximum radius of circular reveal. Distance from center to further child's corner if not specified.
   CircularRevealAnimation({
-    @required this.child,
-    @required this.animation,
+    required this.child,
+    required this.animation,
     this.centerAlignment,
     this.centerOffset,
     this.minRadius,
     this.maxRadius,
-  })  : assert(child != null),
-        assert(animation != null) {
-    assert(this.centerAlignment == null || this.centerOffset == null);
-  }
+  }) :assert(centerAlignment == null || centerOffset == null);
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: animation,
-      builder: (BuildContext context, Widget _) {
+      builder: (BuildContext context, Widget? _) {
         return ClipPath(
           clipper: CircularRevealClipper(
             fraction: animation.value,

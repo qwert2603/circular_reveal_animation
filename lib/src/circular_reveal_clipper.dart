@@ -1,18 +1,17 @@
 import 'dart:math' show sqrt, max;
-import 'dart:ui' show lerpDouble;
 
 import 'package:flutter/material.dart';
 
 @immutable
 class CircularRevealClipper extends CustomClipper<Path> {
   final double fraction;
-  final Alignment centerAlignment;
-  final Offset centerOffset;
-  final double minRadius;
-  final double maxRadius;
+  final Alignment? centerAlignment;
+  final Offset? centerOffset;
+  final double? minRadius;
+  final double? maxRadius;
 
   CircularRevealClipper({
-    @required this.fraction,
+    required this.fraction,
     this.centerAlignment,
     this.centerOffset,
     this.minRadius,
@@ -43,5 +42,9 @@ class CircularRevealClipper extends CustomClipper<Path> {
     final w = max(center.dx, size.width - center.dx);
     final h = max(center.dy, size.height - center.dy);
     return sqrt(w * w + h * h);
+  }
+
+  static double lerpDouble(double a, double b, double t) {
+    return a * (1.0 - t) + b * t;
   }
 }
