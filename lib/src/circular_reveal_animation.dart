@@ -26,7 +26,7 @@ class CircularRevealAnimation extends StatelessWidget {
     this.centerOffset,
     this.minRadius,
     this.maxRadius,
-  }) :assert(centerAlignment == null || centerOffset == null);
+  }) : assert(centerAlignment == null || centerOffset == null);
 
   @override
   Widget build(BuildContext context) {
