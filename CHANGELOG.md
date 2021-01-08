@@ -1,3 +1,7 @@
+## 2.0.0-nullsafety.1
+
+* formal files
+
 ## 2.0.0-nullsafety.0
 
 * nullsafety migration
