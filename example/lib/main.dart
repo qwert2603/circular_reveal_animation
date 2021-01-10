@@ -125,19 +125,16 @@ class _MyHomePageState extends State<MyHomePage>
 
   void showRevealImageDialog(BuildContext context) {
     showGeneralDialog(
-      barrierLabel: "Label",
-      barrierDismissible: true,
-      barrierColor: Colors.black.withOpacity(0.5),
-      transitionDuration: Duration(milliseconds: 700),
       context: context,
+      barrierDismissible: true,
+      barrierLabel: "Label",
+      transitionDuration: Duration(milliseconds: 700),
       pageBuilder: (context, anim1, anim2) {
         return Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Image.asset('assets/klimt.png'),
-            ),
+            child: Image.asset('assets/klimt.png'),
+            padding: const EdgeInsets.all(12.0),
             margin: EdgeInsets.only(top: 50, left: 12, right: 12, bottom: 0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -158,53 +155,21 @@ class _MyHomePageState extends State<MyHomePage>
 
   void showRevealTextDialog(BuildContext context) {
     showGeneralDialog(
-      barrierLabel: "Label",
-      barrierDismissible: true,
-      barrierColor: Colors.black.withOpacity(0.5),
-      transitionDuration: Duration(milliseconds: 700),
       context: context,
+      barrierDismissible: true,
+      barrierLabel: "Label",
+      transitionDuration: Duration(milliseconds: 700),
       pageBuilder: (context, anim1, anim2) {
-        return Center(
-          child: Container(
-            constraints: BoxConstraints(maxWidth: 400.0),
-            child: Material(
-              type: MaterialType.transparency,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text(
-                      "Title of the dialog",
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Text(
-                      "Content of the dialog. Content of the dialog. Content of the dialog. Content of the dialog. ",
-                      style: TextStyle(
-                        fontSize: 18.0,
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: FlatButton(
-                        onPressed: () => Navigator.pop(context),
-                        child: Text("OK"),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+        return AlertDialog(
+          title: Text("Title of the dialog"),
+          content: Text(
+              "Content of the dialog. Content of the dialog. Content of the dialog. Content of the dialog."),
+          actions: [
+            FlatButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text("OK"),
             ),
-            margin: EdgeInsets.all(12.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5),
-            ),
-          ),
+          ],
         );
       },
       transitionBuilder: (context, anim1, anim2, child) {
