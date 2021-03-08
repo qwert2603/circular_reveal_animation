@@ -1,3 +1,7 @@
+## 2.0.0
+
+* nullsafety release
+
 ## 2.0.0-nullsafety.1
 
 * formal files
