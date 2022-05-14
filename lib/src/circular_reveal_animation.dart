@@ -32,7 +32,7 @@ class CircularRevealAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: animation,
-      builder: (BuildContext context, Widget? _) {
+      builder: (BuildContext context, Widget? child) {
         return ClipPath(
           clipper: CircularRevealClipper(
             fraction: animation.value,
@@ -41,9 +41,10 @@ class CircularRevealAnimation extends StatelessWidget {
             minRadius: minRadius,
             maxRadius: maxRadius,
           ),
-          child: this.child,
+          child: child,
         );
       },
+      child: this.child,
     );
   }
 }
