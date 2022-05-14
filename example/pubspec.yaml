@@ -11,9 +11,9 @@ dependencies:
     sdk: flutter
   circular_reveal_animation:
     path: ../
-  url_launcher: ^6.0.0-nullsafety.1
+  url_launcher: ^6.1.2
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.4
 
 dev_dependencies:
   flutter_test:

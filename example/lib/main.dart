@@ -64,8 +64,11 @@ class _MyHomePageState extends State<MyHomePage>
                     'https://github.com/qwert2603/circular_reveal_animation',
                     style: TextStyle(fontSize: 16, color: Colors.deepOrange),
                   ),
-                  onTap: () => launch(
-                      "https://github.com/qwert2603/circular_reveal_animation"),
+                  onTap: () => launchUrl(
+                    Uri.dataFromString(
+                      "https://github.com/qwert2603/circular_reveal_animation",
+                    ),
+                  ),
                 ),
                 SizedBox(height: 4),
                 InkWell(
@@ -73,8 +76,11 @@ class _MyHomePageState extends State<MyHomePage>
                     'https://pub.dev/packages/circular_reveal_animation',
                     style: TextStyle(fontSize: 16, color: Colors.deepOrange),
                   ),
-                  onTap: () => launch(
-                      "https://pub.dev/packages/circular_reveal_animation"),
+                  onTap: () => launchUrl(
+                    Uri.dataFromString(
+                      "https://pub.dev/packages/circular_reveal_animation",
+                    ),
+                  ),
                 ),
                 SizedBox(height: 12),
                 MaterialButton(
@@ -165,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage>
           content: Text(
               "Content of the dialog. Content of the dialog. Content of the dialog. Content of the dialog."),
           actions: [
-            FlatButton(
+            TextButton(
               onPressed: () => Navigator.pop(context),
               child: Text("OK"),
             ),
