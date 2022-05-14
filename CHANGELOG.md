@@ -1,3 +1,8 @@
+## 2.0.1
+
+* animation performance improvement (thanks to [@shivamkj](https://github.com/shivamkj))
+* update example project
+
 ## 2.0.0
 
 * nullsafety release
