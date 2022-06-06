@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage>
                     ),
                   ),
                 ),
-                SizedBox(height: 4),
+                SizedBox(height: 12),
                 InkWell(
                   child: Text(
                     'https://pub.dev/packages/circular_reveal_animation',
