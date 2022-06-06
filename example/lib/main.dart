@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage>
                     style: TextStyle(fontSize: 16, color: Colors.deepOrange),
                   ),
                   onTap: () => launchUrl(
-                    Uri.dataFromString(
+                    Uri.parse(
                       "https://github.com/qwert2603/circular_reveal_animation",
                     ),
                   ),
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage>
                     style: TextStyle(fontSize: 16, color: Colors.deepOrange),
                   ),
                   onTap: () => launchUrl(
-                    Uri.dataFromString(
+                    Uri.parse(
                       "https://pub.dev/packages/circular_reveal_animation",
                     ),
                   ),
