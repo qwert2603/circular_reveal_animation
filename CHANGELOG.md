@@ -1,3 +1,7 @@
+## 2.0.2
+
+* renders the child without any clip at all when the animation is complete, which is important for children that can overflow their bounds.
+
 ## 2.0.1
 
 * animation performance improvement (thanks to [@shivamkj](https://github.com/shivamkj))
