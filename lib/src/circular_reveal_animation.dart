@@ -38,18 +38,18 @@ class CircularRevealAnimation extends StatelessWidget {
       animation: animation,
       builder: (BuildContext context, Widget? child) {
         // if animation is complete (fully revealed), don't clip at all. (discussed in https://github.com/qwert2603/circular_reveal_animation/issues/9)
-        return !sustainClip && animation.value == 1
-            ? child!
-            : ClipPath(
-                clipper: CircularRevealClipper(
-                  fraction: animation.value,
-                  centerAlignment: centerAlignment,
-                  centerOffset: centerOffset,
-                  minRadius: minRadius,
-                  maxRadius: maxRadius,
-                ),
-                child: child,
-              );
+        return ClipPath(
+          clipBehavior:
+              !sustainClip && animation.value == 1 ? Clip.none : Clip.antiAlias,
+          clipper: CircularRevealClipper(
+            fraction: animation.value,
+            centerAlignment: centerAlignment,
+            centerOffset: centerOffset,
+            minRadius: minRadius,
+            maxRadius: maxRadius,
+          ),
+          child: child,
+        );
       },
       child: this.child,
     );
