@@ -9,6 +9,9 @@ class CircularRevealAnimation extends StatelessWidget {
   final Widget child;
   final Animation<double> animation;
 
+  /// if true, the clip will be applied even when the animation is complete. Default is false.
+  final bool sustainClip;
+
   /// Creates [CircularRevealAnimation] with given params.
   /// For open animation [animation] should run forward: [AnimationController.forward].
   /// For close animation [animation] should run reverse: [AnimationController.reverse].
@@ -26,6 +29,7 @@ class CircularRevealAnimation extends StatelessWidget {
     this.centerOffset,
     this.minRadius,
     this.maxRadius,
+    this.sustainClip = false,
   }) : assert(centerAlignment == null || centerOffset == null);
 
   @override
@@ -34,7 +38,7 @@ class CircularRevealAnimation extends StatelessWidget {
       animation: animation,
       builder: (BuildContext context, Widget? child) {
         // if animation is complete (fully revealed), don't clip at all. (discussed in https://github.com/qwert2603/circular_reveal_animation/issues/9)
-        return animation.value == 1
+        return !sustainClip && animation.value == 1
             ? child!
             : ClipPath(
                 clipper: CircularRevealClipper(
